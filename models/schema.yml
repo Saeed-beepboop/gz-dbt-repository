@@ -151,14 +151,14 @@ models:
         tests:
           - not_null
       - name: shipping_fee
-        description: How much the client paid for shipping
+        description: how much the client paid for shipping
         tests:
           - not_null
       - name: logcost
-        description: How much it costs to the company to handle the order
+        description: the cost of preparing the parcel in the distribution centre/warehouse
         tests:
           - not_null
       - name: ship_cost
-        description: How much it costs to the company to organize the shipping
+        description: how much it costs to the company to organize the shipping
         tests:
           - not_null
