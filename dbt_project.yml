@@ -11,7 +11,7 @@ models:
     mart:
       +materialized: table
       finance:
-        +database: finance
+        +schema: finance
 
 # models:
 #   mart:
