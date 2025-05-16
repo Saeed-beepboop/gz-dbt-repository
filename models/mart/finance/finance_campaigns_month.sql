@@ -30,4 +30,5 @@ date_trunc(date_date, MONTH) AS datemonth
 , SUM(ship_cost) AS ship_cost
 FROM {{ ref('int_campaigns_day')}}
 FULL OUTER JOIN {{ref ('finance_days')}} USING (date_date)
-ORDER BY fd.date_date DESC
+GROUP BY datemonth
+ORDER BY datemonth desc
