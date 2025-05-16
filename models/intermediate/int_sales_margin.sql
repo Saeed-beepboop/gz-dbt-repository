@@ -11,5 +11,6 @@ products_id
 ,quantity
 ,ROUND(quantity * purchase_price) AS purchase_cost
 ,ROUND(revenue - ROUND(quantity * purchase_price)) AS margin
-FROM {{ ref("stg_raw__sales")}}
+,{{margin_percent('s.revenue', 's.quantity * CAST(s.purchase_price AS FLOAT64')}} AS margin_percent
+FROM {{ ref("stg_raw__sales")}} AS s
 LEFT JOIN {{ ref("stg_raw__product")}} USING (products_id)
