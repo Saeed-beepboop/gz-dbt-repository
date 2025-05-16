@@ -29,5 +29,5 @@ fd.date_date AS date
 , logcost AS log_cost
 , ship_cost
 FROM {{ ref("finance_days")}} AS fd
-FULL OUTER {{ref ('int_campaigns_day')}} AS icd USING (date_date)
+FULL OUTER JOIN {{ref ('int_campaigns_day')}} AS icd USING (date_date)
 ORDER BY fd.date_date DESC
