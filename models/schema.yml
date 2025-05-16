@@ -188,7 +188,7 @@ models:
       - name: ads_cost
         tests:
           - not_null
-      - name: ads_impressions
+      - name: ads_impression
         tests:
           - not_null
       - name: ads_clicks

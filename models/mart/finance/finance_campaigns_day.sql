@@ -19,7 +19,7 @@ fd.date_date AS date
 , ROUND(average_basket, 2) AS average_basket
 , operational_margin
 , ads_cost
-, ads_impressions
+, ads_impression
 , ads_clicks
 , quantity
 , revenue
