@@ -14,7 +14,7 @@
 -- ship_cost
 
 SELECT
-date_trunc(MONTH, fd.date_date) AS datemonth
+date_trunc(date_date, MONTH) AS datemonth
 , SUM(operational_margin - ads_cost) AS ads_margin
 , ROUND(SUM(revenue)/NULLIF(SUM(nb_transactions),0), 2) AS average_basket
 , SUM(operational_margin) AS operational_margin
