@@ -182,3 +182,16 @@ models:
     tests:
       - unique:
           column_name: "(campaign_name || '-' || date_date)"
+  - name: int_campaigns_day
+    description: data from all campaigns per day
+    columns:
+      - name: ads_cost
+        tests:
+          - not_null
+      - name: ads_impression
+        tests:
+          - not_null
+      - name: ads_clicks
+        tests:
+          - not_null
+      
