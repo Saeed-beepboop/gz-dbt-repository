@@ -14,7 +14,7 @@
 -- ship_cost
 
 SELECT
-fd.date_date AS date
+date_date
 , (operational_margin - ads_cost) AS ads_margin
 , ROUND(average_basket, 2) AS average_basket
 , operational_margin
@@ -28,6 +28,6 @@ fd.date_date AS date
 , shipping_fees
 , logcost AS log_cost
 , ship_cost
-FROM {{ ref("finance_days")}} AS fd
-FULL OUTER JOIN {{ref ('int_campaigns_day')}} AS icd USING (date_date)
-ORDER BY fd.date_date DESC
+FROM {{ ref('int_campaigns_day')}}
+FULL OUTER JOIN {{ref ('finance_days')}} USING (date_date)
+ORDER BY date_date DESC
